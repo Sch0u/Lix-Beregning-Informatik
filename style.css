@@ -1,0 +1,11 @@
+.title-header{
+    height: 20%;
+    width: 100%;
+    display: inline-flex;
+    border: 1px black solid;
+}
+
+.equation-box {
+    top: 0;
+    border: 2px grey solid;
+}
