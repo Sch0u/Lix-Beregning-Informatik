@@ -10,52 +10,84 @@
 </head>
 
 
-<body class="container">
+<body>
     <header class="title-header">
-        <h1>LIX-beregner</h1>
-        <div class="equation-box">
-    
-            LIX =  <div class="frac">
-                <span>Antal ord i teksten</span>
-                <span class="symbol">/</span>
-                <span class="bottom">Antal punktummer i teksten</span>
-                
-            </div>
-            +
-            <div class="frac">
-                <span>Antal lange ord (over 6 tegn) &#8901; 100</span>
-                <span class="symbol">/</span>
-                <span class="bottom">Antal ord i teksten</span>
-                
-            </div>
+        <div id="title">
+            <h3>LIX-beregner</h3>
         </div>
+        
     </header>
-    <div>
-        <div >
-            <textarea placeholder="Indsæt tekst her..."></textarea>
-            <ul>
-                <li>Antal ord: </li>
-                <li>Antal punktum: </li>
-                <li>Antal lange ord: </li>
-            </ul>
-            <p>Dette er til en oversigt</p>
-        </div>
 
-        <div class="calculation-row">
-            <p>LIX-tal: </p>
-            <button>Beregn</button>
+    <div class="container">
+        <div class="text-input-row">
+            <textarea placeholder="Indsæt tekst her..." id="inputTxt" autofocus></textarea>
+            <div class="text-counters">
+                <table>
+                    <tr>
+                        <td>Antal ord: </td>
+                        <td id="word-count"> </td>
+                    </tr>
+                    <tr>
+                        <td>Antal punktum: </td>
+                        <td id="stop-count"> </td>
+                    </tr>
+                    <tr>
+                        <td>Antal lange ord:</td>
+                        <td id="long-count"> </td>
+                    </tr> 
+                    <br><br><br>
+                    <tr>
+                        <td><b>LIX-tal: </b></td>
+                        <td id="lix-number"></td>
+                    </tr>
+                </table>
+                <br>
+                <button id="btn-calculate" onclick="calculateLIX()">Beregn</button>
+            </div>
+        </div>
+        
+        <div class="fact-box-row">
+            <div class="fact-box">
+                <div>
+                    <p><b>LIX-skalaen</b></p>
+                    <p id="veryDiff">&#62;55: Meget svær, faglitteratur på akademisk niveau, lovtekster</p>
+                    <p id="highDiff">45-54: Svær, fx saglige bøger, populærvidenskabelige værker, akademiske udgivelser</p>
+                    <p id="midDiff">35-44: Middel, fx dagblade og tidsskrifter</p>
+                    <p id="lowDiff">25-34: Let for øvede læsere, fx ugebladslitteratur og skønlitteratur for voksne</p>
+                    <p id="beginDiff">&#60;24: Let tekst for alle læsere, fx børnelitteratur </p>
+                </div>
+            </div>
+            
+            <div class="fact-box">
+                
+                <div>
+                    <p><b>LIX fakta</b></p>
+                    <div class="equation-box">
+                        <b>LIX</b> =  <div class="frac">
+                            <span>Antal ord i teksten</span>
+                            <span class="symbol">/</span>
+                            <span class="bottom">Antal punktummer i teksten</span>
+                            
+                        </div>
+                        +
+                        <div class="frac">
+                            <span>Antal lange ord (over 6 tegn) &#8901; 100</span>
+                            <span class="symbol">/</span>
+                            <span class="bottom">Antal ord i teksten</span>
+                            
+                        </div>
+                        <br><br>
+                    </div>
+                    <p>Det mest interessante læsbarheds-analysesystem for danskere er LIX (LæsbarhedsIndeX). 
+                        LIX er en talværdi, der giver et fingerpeg om, hvor let eller svær en tekst er. 
+                        Metoden kan bruges til meget, men har også sine svagheder.</p><br>
+                    <footer class="blockquote-footer"><cite><a href="https://omatskrive.dk/lix-saadan-goer-du/">www.omatskrive.dk/lix-saadan-goer-du/</a></cite></footer>
+                </div>
+            </div>
         </div>
     </div>
-
-    <div class="fact-box-row">
-        <div class="scale-box">
-            <p>>55: </p><br>
-        </div>
-
-        <div class="fact-box">
-            LIX fakta
-        </div>
-    </div>
-
+        
 </body>
 </html>
+
+<script src="script.js"></script>

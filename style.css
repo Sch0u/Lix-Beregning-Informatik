@@ -1,25 +1,97 @@
-h1 {
-    padding: 12px;
+html {
+    --main-light-color: #F3F2F1;
+    --main-color: #7C7C7C;
+    --title-header: #e3e3e2;
+
+    height: 100%;
+    width: 100%;
+    background: var(--title-header) !important;  
+}
+
+body{
+    height: 100% !important;
+    width: 80%;
+    margin: 0px 10vw !important;
+    background-color: #FBFBFB !important;
+}
+
+h3 {
+    padding: 20px;
 }
 
 .title-header{
-    height: 20%;
+    height: 12vh;
     width: 100%;
+    color: #F3F2F1;
+    background-color: var(--main-color);
+    border-bottom: 5px var(--title-header) solid;
+}
+
+#title {
     position: relative;
     float: left;
-    border: 1px black solid;
+}
+
+/* text-input-row */
+.text-input-row{
+    margin-top: 2vh;
+    height: 35vh;
+    width: 100%;    
+}
+
+.text-input-row textarea {
+    resize: none;
+    width: 70%;
+    height: 100%; 
+    float: left;
+    border: 3px solid var(--main-color);
+    border-radius: 4px;
+    
+}
+
+.text-counters {
+    width: 28%;
+    height: 100%;
+    float: right;
+}
+
+.text-counters table{
+    width: 85%;
+}
+
+#lix-number {
+    font-weight: bold;
+}
+
+#btn-calculate {
+    height: 50px;
+    color: var(--main-light-color);
+    background-color: var(--main-color);
+    border: 2px var(--main-light-color) solid;
+    border-radius: 6px;
+}
+
+/* fact-box-row */
+.fact-box-row{
+    height: 50vh;
+    width: 100%;
+    display: inline-block;
+}
+
+.fact-box {
+    height: calc(100% - 3vh);
+    width: 49.5%;
+    margin-top: 3vh;
+    display: inline-flex;
+    padding: 8px;
+    border: 3px solid var(--main-color);
+    border-radius: 5px;
 }
 
 .equation-box {
-    height: 100%;
-    top: 0;
-    right:0;
-    padding: 10px 10px;
-    position: absolute;
-    float: right;
-    border: 2px black solid;
+    font-size: 0.8rem;
+    text-align: center;
 }
-
 
 /* Fraction class*/
 .frac {
@@ -34,8 +106,8 @@ h1 {
     padding: 0.1em;
 }
 .frac span.bottom {
-    border-top: thin solid black;
+    border-top: thin solid #707174;
 }
 .frac span.symbol {
     display: none;
-} 
+}
