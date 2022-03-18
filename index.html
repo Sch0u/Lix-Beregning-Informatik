@@ -10,17 +10,28 @@
 </head>
 
 
-<body>
+<body class="container">
     <header class="title-header">
-            <h1>LIX-beregner</h1>
-            <div class="equation-box">
-                This is the box for equation
-            </div>
-    </header>
+        <h1>LIX-beregner</h1>
+        <div class="equation-box">
     
-
+            LIX =  <div class="frac">
+                <span>Antal ord i teksten</span>
+                <span class="symbol">/</span>
+                <span class="bottom">Antal punktummer i teksten</span>
+                
+            </div>
+            +
+            <div class="frac">
+                <span>Antal lange ord (over 6 tegn) &#8901; 100</span>
+                <span class="symbol">/</span>
+                <span class="bottom">Antal ord i teksten</span>
+                
+            </div>
+        </div>
+    </header>
     <div>
-        <div>
+        <div >
             <textarea placeholder="Indsæt tekst her..."></textarea>
             <ul>
                 <li>Antal ord: </li>
@@ -29,12 +40,22 @@
             </ul>
             <p>Dette er til en oversigt</p>
         </div>
-       
 
+        <div class="calculation-row">
+            <p>LIX-tal: </p>
+            <button>Beregn</button>
+        </div>
     </div>
 
-    
+    <div class="fact-box-row">
+        <div class="scale-box">
+            <p>>55: </p><br>
+        </div>
 
+        <div class="fact-box">
+            LIX fakta
+        </div>
+    </div>
 
 </body>
 </html>

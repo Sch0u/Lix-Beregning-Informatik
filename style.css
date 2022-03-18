@@ -1,11 +1,41 @@
+h1 {
+    padding: 12px;
+}
+
 .title-header{
     height: 20%;
     width: 100%;
-    display: inline-flex;
+    position: relative;
+    float: left;
     border: 1px black solid;
 }
 
 .equation-box {
+    height: 100%;
     top: 0;
-    border: 2px grey solid;
+    right:0;
+    padding: 10px 10px;
+    position: absolute;
+    float: right;
+    border: 2px black solid;
 }
+
+
+/* Fraction class*/
+.frac {
+    display: inline-block;
+    position: relative;
+    vertical-align: middle;
+    letter-spacing: 0.001em;
+    text-align: center;
+}
+.frac > span {
+    display: block;
+    padding: 0.1em;
+}
+.frac span.bottom {
+    border-top: thin solid black;
+}
+.frac span.symbol {
+    display: none;
+} 
