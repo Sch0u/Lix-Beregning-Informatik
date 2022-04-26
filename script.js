@@ -1,4 +1,5 @@
-function calculateLIX(){
+function calculateLIX(){ // Called in 'Beregn' button on HTML page
+
     var inputTxt = document.getElementById("inputTxt").value;
 
     // Word count
@@ -30,6 +31,7 @@ function calculateLIX(){
 }
 
 function checkNull(obj){
+    // If obj is null, set it to 0. This is to avoid a null error
     if(obj == null){
         obj = 0;
     } else{
@@ -39,7 +41,10 @@ function checkNull(obj){
     return obj;
 }
 
+
 function highlightDiff(number){
+    // Depending on the LIX-number of the text, highlight the range that the number falls in, by
+    // making the text bold in the 'LIX-skalaen' box
     removeHighlight();
     if(number > 55){
         document.getElementById("veryDiff").style.fontWeight = 'bold';
@@ -55,6 +60,7 @@ function highlightDiff(number){
 }
 
 function removeHighlight(){
+    // Parse through the paragraphs in 'LIX-skalaen' box and remove their boldness
     var paragraphs = document.getElementsByClassName('fact-box')[0].children[0].children;
     for(i = 1; i < paragraphs.length; i++){
         paragraphs[i].style.fontWeight = '';
